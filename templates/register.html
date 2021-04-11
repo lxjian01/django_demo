@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html style="width: 100%;height: 100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登陆</title>
+    <link rel="stylesheet" href="/static/js/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/login.css"/>
+</head>
+<body class="body">
+<div id="myalert" class="myalert">
+    <span id="myalert_text"></span>
+</div>
+<span class="title"
+      style="margin-left:39%;margin-top:6%;width: 50%;display: block;float: left;font-size: 30px;color: wheat;">
+    Django demo platform
+</span>
+
+<form id="registerform" name="registerform" class="form">
+    {% csrf_token %}
+    <div style="width:420px;height:380px;background: #fff;border-radius: 5px;padding: 0px">
+        <div class="login-title input-group-addon">用户注册</div>
+        <div class="form-group input" style="margin-top: 20px;">
+            <input type="input" value="" autocomplete="off" maxlength="20" id="username"
+                   name="username" placeholder="请输入用户账号" class="form-control">
+        </div>
+        <div class="form-group input" style="margin-top: 20px;">
+            <input type="input" value="" autocomplete="off" maxlength="20" id="email"
+                   name="email" placeholder="请输入邮箱" class="form-control">
+        </div>
+        <div class="form-group input" style=";margin-top: 10px;">
+            <input type="password" value="" autocomplete="off" maxlength="20" id="pwd"
+                   name="pwd" placeholder="请输入用户密码" class="form-control">
+        </div>
+        <div class="form-group input" style=";margin-top: 10px;">
+            <input type="password" value="" autocomplete="off" maxlength="20" id="pwd_ok"
+                   name="pwd_ok" placeholder="请确认密码" class="form-control">
+        </div>
+        <button type="button" id="register" name="register" style="float: right;margin-right: 10%"
+                class="btn btn-primary btn-sm">注&nbsp;&nbsp;&nbsp;&nbsp;册
+        </button>
+    </div>
+    </div>
+</form>
+
+<script src="/static/js/jquery-2.2.2.min.js"></script>
+<script src="/static/js/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/js/jquery.form.js"></script>
+<script src="/static/js/comm.js"></script>
+<script src="/static/js/axjx_csrf.js"></script>
+<script>
+
+    $(function () {
+        var options = {
+            //target: '#Tip', //后台将把传递过来的值赋给该元素
+            url: "/user/register/", //提交给哪个执行
+            type: 'POST',
+            beforeSubmit: function () {
+
+            },  // pre-submit callback
+            success: function (result) {
+                console.info(result)
+                if (result.state) {
+                    alert("注册成功,请到邮箱点击激活链接激活账号")
+                    window.location.href = "{% url 'to_login' %}"
+                } else {
+                    myAlertTop(result.msg)
+                }
+            }, //显示操作提示
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                myAlertTop("提交异常" + errorThrown.toString());
+            }
+        };
+        $("#register").bind("click", function () {
+            $("#registerform").ajaxSubmit(options);
+        });
+    });
+</script>
+</body>
+
+</html>

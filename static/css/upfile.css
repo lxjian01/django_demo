@@ -1,0 +1,40 @@
+/**********************************上传附件公共样式********************************/
+.ulImgs {
+	margin: 0;
+	padding: 0;
+	border: none;
+	width: 690px;
+}
+.ulImgs li{
+	float: left;
+	list-style: none;
+	padding: 10px;
+	width: 200px;
+}
+.ulImgs li .top{
+	float: left;
+	position: relative;
+}
+.ulImgs li .top a{
+	float: left;
+	width: 180px;
+}
+.ulImgs li .top img{
+	float: left;
+	width: 109px;
+	height: 109px;
+	margin-bottom: 6px;
+}
+.ulImgs li .top i{
+	float: right;
+	padding: 5px;
+	margin: 0;
+	left:82px;
+	top:2px;
+	background:rgba(0,0,0,0.6);
+	position: absolute;
+}
+.ulImgs li input[type="file"]{
+	width: 200px;
+	clear: both;
+}

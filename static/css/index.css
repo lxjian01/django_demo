@@ -1,0 +1,242 @@
+* {
+	list-style: none;
+	border: none;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	overflow: hidden;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	background: url("../img/main/background.png") center no-repeat fixed;
+	background-size: cover;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "宋体";
+}
+
+.navbar {
+	border: none;
+	background-color: #1C2329;
+	margin: 0;
+	padding: 0 20px;
+	height: 65px;
+	line-height: 65px;
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 20;
+	border-radius: 0;
+	min-width: 1024px;
+}
+
+.nav-index-title {
+	height: 65px;
+	line-height: 65px;
+	list-style: none;
+	margin: 0 0 0 60px;
+	padding: 0;
+	border: none;
+}
+
+.nav-index-title li {
+	height: 65px;
+	line-height: 65px;
+	margin: 0 0 0 10px;
+	padding: 0 10px;
+	cursor: pointer;
+	color: white;
+	box-sizing: border-box;
+}
+
+.nav-index-title li:hover {
+	background-color:#000;
+}
+
+.pull-right {
+	position: absolute;
+	margin-left: 80%;
+	padding: 0;
+	height: 65px;
+	box-sizing: border-box;
+}
+
+.pull-right li {
+	height: 65px;
+	line-height: 65px;
+	margin: 0 0 0 10px;
+	padding: 0 20px;
+	cursor: pointer;
+	color: white;
+	box-sizing: border-box;
+}
+
+.pull-right li:hover {
+	background-color: #080808;
+}
+
+.dropdown-menu {
+	margin: 0;
+	padding: 0;
+	width: 100px;
+	height: auto;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+.dropdown-menu li {
+	margin: 0;
+	padding: 0;
+	height: 39px;
+	box-sizing: border-box;
+	border-bottom: solid 1px #F0F0F0;
+}
+
+.dropdown-menu li a {
+	margin: 0;
+	padding: 0 0 0 15px;
+	height: 39px;
+	line-height: 39px;
+	box-sizing: border-box;
+}
+
+.dropdown-menu li a i {
+	margin-right: 16px;
+}
+
+.dropzone {
+	min-height: 150px;
+	border: 2px solid rgba(0, 0, 0, 0.3);
+	background: white;
+	padding: 20px 20px;
+	cursor: pointer;
+}
+
+.carousel {
+	width: 100%;
+}
+
+.carousel-control {
+	background: none;
+	height: 100%;
+	width: 10%;
+}
+
+.carousel-control .glyphicon {
+	background: none;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/* 50%为自身尺寸的一半 */
+	font-size: 43px;
+}
+
+.carousel-control.right {
+	background: none;
+}
+
+.item {
+	height: 100%;
+	overflow: hidden;
+}
+
+.item ul {
+	height: auto;
+	width: 80%;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/* 50%为自身尺寸的一半 */
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+.item ul li {
+	float: left;
+	margin-top: 36px;
+	margin-bottom: 36px;
+	margin-left: 63px;
+	width: 146px;
+	height: 146px;
+	text-align: center;
+	display: inline;
+
+}
+
+.item ul li a {
+	text-decoration: none;
+}
+
+.item ul li a img {
+	transition: .1s transform;
+	transform: translateZ(0);
+	width: 123px;
+	height: 123px;
+}
+
+.item ul li a p {
+	font-size: 18px;
+	color: #FFFFFF;
+	margin-top: 15px;
+}
+
+.item ul li a img:hover {
+	transform: scale(1.1, 1.1);
+	transition: .3s transform;
+}
+.item .page-content-two {
+	display: inline;
+	margin-left: 30px;
+}
+
+.item .page-content-two li {
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 70px;
+	width: 126px;
+	height: 126px;
+	text-align: center;
+}
+
+.item .page-content-two li a img {
+	width: 100px;
+	height: 100px;
+}
+
+.item .page-content-two li a p {
+	font-size: 16px;
+	color: #FFFFFF;
+	margin-top: 6px;
+}
+/*---------------自定义提示框样式----------------*/
+.myalert{
+	background:#2b819c;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius:6px;
+	height:46px;
+	line-height: 46px;
+	width:500px;
+	position:absolute;
+	top: -46px;
+	left: 50%;
+	opacity: 0.8;
+  	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  	filter: alpha(opacity=80);
+	z-index: 1000000000000;
+	transform: translate(-50%, 0%);
+	text-align: center;
+}
+.myalert span{
+	height: 46px;
+	line-height: 46px;
+	font-size: 18px;
+	color: white;
+}

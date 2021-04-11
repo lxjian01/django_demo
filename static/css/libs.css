@@ -1,0 +1,270 @@
+* {
+	list-style: none;
+	border: none;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	width: 100%;
+	height: auto;
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+}
+#content{
+	margin-top:65px;
+	margin-bottom: 0;
+	box-sizing: border-box;
+}
+.content-main{
+	width:100%;
+	height: auto;
+	float: left;
+}
+.content-main-left{
+	width: 200px;
+	float: left;
+	overflow-x: hidden;
+	overflow-y: auto !important;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.content-main-right{
+	float: left;
+	border-left: 1px solid #F0F0F0;
+	overflow-x: hidden;
+	overflow-y: auto !important;
+	margin: 0;
+	padding: 0 10px 0 0;
+}
+.content-right-top{
+	padding: 20px 20px 20px 20px;width: 100%;height: 60px;
+}
+/*********************************解决chome的fixed抖动****-webkit-transform: translateZ(0);*****************/
+.navbar {
+	border: none;
+	background-color:#293035;
+	margin: 0;
+	padding: 0 20px;
+	height: 65px;
+	line-height: 65px;
+	position: fixed;
+	-webkit-transform: translateZ(0);
+	top:0;
+	right: 0;
+	left: 0;
+	z-index: 20;
+	border-radius: 0;
+	min-width: 1024px;
+}
+
+.nav-home-title {
+	height: 65px;
+	line-height: 65px;
+	list-style: none;
+	margin: 0 0 0 60px;
+	padding: 0;
+	border: none;
+}
+
+.nav-home-title li {
+	height: 65px;
+	line-height: 65px;
+	margin: 0 0 0 10px;
+	padding: 0 10px;
+	cursor: pointer;
+	color: white;
+	box-sizing: border-box;
+}
+
+.nav-home-title li:hover {
+	background-color:#000;
+}
+  .modal td{
+	  font-size: 12px;
+  }
+.pull-right{
+	position: absolute;
+	margin-left: 80%;
+	padding: 0;
+	height: 65px;
+	box-sizing: border-box;
+}
+.pull-right li{
+	height: 65px;
+	line-height: 65px;
+	margin: 0 0 0 10px;
+	padding: 0 20px;
+	cursor: pointer;
+	color: white;
+	box-sizing: border-box;
+}
+.pull-right li:hover{
+	background-color: #080808;
+}
+.dropdown-menu{
+	margin: 0;
+	padding: 0;
+	width: 100px;
+	height: auto;
+	list-style: none;
+	box-sizing: border-box;
+}
+.dropdown-menu li{
+	margin: 0;
+	padding: 0;
+	height: 39px;
+	box-sizing: border-box;
+	border-bottom: solid 1px #F0F0F0;
+}
+.dropdown-menu li a{
+	margin: 0;
+	padding: 0 0 0 15px;
+	height: 39px;
+	line-height: 39px;
+	box-sizing: border-box;
+}
+.dropdown-menu li a i{
+	margin-right: 16px;
+}
+
+/*---------------------自定义panle+table样式开始---------------------------------*/
+.panel-table{
+	margin: 15px;
+	padding: 0;
+	border: none;
+	box-shadow:none;
+}
+.table thead tr th{
+	border: none;
+}
+.pagination{
+	display: block;
+	width: auto;
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+.table-rowtotal{
+	height: 30px;
+	line-height: 30px;
+	float: right;
+	margin-left: 20px;
+	color: #333;
+}
+.sub_table{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+.sub_table li{
+	margin: 0 0 0 10px;
+	padding: 0;
+	width: 126px;
+	height: 30px;
+	float: left;
+	line-height: 30px;
+}
+.sub_table li a{
+	float: left;
+	margin-right: 15px;
+}
+/*------------------修改bootstrap模态框位置-----------------*/
+.modal-dialog{
+	width: 360px;
+}
+.modal-footer{
+	padding: 10px;
+}
+
+.modal_tb {
+	display: table;
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+}
+
+.modal_tb > .modal_tc {
+	display: table-cell;
+	pointer-events: none;
+	vertical-align: middle;
+}
+
+.modal_tb > .modal_tc > div {
+	pointer-events: auto;
+}
+/*---------------自定义提示框样式----------------*/
+.myalert{
+	background:#2b819c;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius:6px;
+	height:46px;
+	line-height: 46px;
+	width:500px;
+	position:fixed;
+	top: -46px;
+	left: 50%;
+	opacity: 0.8;
+  	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  	filter: alpha(opacity=80);
+	z-index: 1000000000000;
+	transform: translate(-50%, 0%);
+	text-align: center;
+}
+.myalert span{
+	height: 46px;
+	line-height: 46px;
+	font-size: 18px;
+	color: white;
+}
+/********************************修改zTree默认样式***********************************/
+#treeDemo_1_ico {
+	background: url(/static/img/groups.png) !important;
+}
+
+.ico_docu {
+	background: url(/static/img/groups.png) !important;
+}
+
+.ztree li span.button.add {
+	margin-left: 2px;
+	margin-right: -1px;
+	background-position: -144px 0;
+	vertical-align: top;
+	vertical-align: middle;
+}
+
+.ztree li span.button.ico_open {
+	background: url(/static/img/groups.png) !important;
+}
+.ico_close {
+	background: url(/static/img/groups.png) !important
+}
+
+/*********左边树样式start，参考：http://blog.csdn.net/tang05709/article/details/40430275****************************/
+#leftbar{width:100%; margin:0; padding:0; display:block; position:relative;}
+#leftbar li{width:100%;border-bottom: 1px solid #EBEBEB;display: block; position:relative;}
+#leftbar li a{padding: 10px 15px;display: block;text-decoration:none;color:#555;}
+#leftbar li a:hover{}
+.leftbar_selected{text-decoration: none;background-color:#F5F5F5;color:#555;}
+.leftbar_selected a{text-decoration: none;color:#555;}
+
+#leftbar_bar{display: block;float: left;position: relative;width: 220px;z-index: 16;}
+#leftbar_bar ul{width:220px; margin:0; padding:0;border-bottom: 1px solid #37414b; display:block; position:relative}
+#leftbar_bar li{border-top: 1px solid #37414b;border-bottom: 1px solid #1f262d;display: block; position:relative;}
+#leftbar_bar li a{padding: 10px 15px;display: block;}
+#leftbar_bar li a:hover,
+#leftbar_bar li a:focus{text-decoration: none;background-color:#0099FF;color:#FFFFFF;
+}
+#leftbar .on a{background:red;text-decoration: none;color:#FFFFFF;}
+/**********************************左边树样式end********************************/
+
+.xuanzhong{
+	background: #558EBF !important;
+	color: #fff !important;
+}
+

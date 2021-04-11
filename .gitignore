@@ -1,0 +1,9 @@
+.git
+.idea
+*.pyc
+__pycache__
+celerybeat.pid
+celerybeat-schedule
+migrations
+tests
+celerybeat*

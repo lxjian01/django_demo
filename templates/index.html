@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/js/bootstrap/css/bootstrap.min.css">
+    <script src="/static/js/jquery-2.2.2.min.js"></script>
+</head>
+<body>
+hello world
+<button type="button" onclick="toLogin()">登录</button>
+<button type="button" onclick="toRegister()">注册</button>
+
+<script src="/static/js/bootstrap/js/bootstrap.js"></script>
+<script>
+    $(function () {
+
+    })
+
+    function toLogin() {
+        window.location.href = "{% url 'to_login' %}"
+    }
+    function toRegister() {
+        window.location.href = "{% url 'to_register' %}"
+    }
+</script>
+</body>
+</html>
